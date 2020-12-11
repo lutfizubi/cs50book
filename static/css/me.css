@@ -1,0 +1,52 @@
+/* W3 schools parallax */
+
+body, html {
+  height: 100%;
+}
+
+.ski {
+  /* image */
+  background-image: url('https://imgur.com/11BeOLa.jpg');
+
+  /* height */
+  height: 85%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallaxski {
+  /* image */
+  background-image: url('https://imgur.com/6XLrpFZ.jpg');
+
+  height: 85%;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallaxski2 {
+  /* image  */
+  background-image: url('https://i.imgur.com/Mha7CCH.jpg');
+  height: 85%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+.parallaxhisotry {
+  /* image*/
+  background-image: url('https://imgur.com/9d58SHL.jpg');
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+

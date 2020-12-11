@@ -1,0 +1,141 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing:border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  padding: 64px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both
+}
+
+.column-66 {
+  float: left;
+  width: 66.66666%;
+  padding: 20px;
+}
+
+.column-33 {
+  float: left;
+  width: 33.33333%;
+  padding: 20px;
+}
+
+.checked {
+  color: orange;
+}
+
+.large-font {
+  font-size: 48px;
+}
+
+.xlarge-font {
+  font-size: 64px
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #4CAF50;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+  .column-66,
+  .column-33 {
+    width: 100%;
+    text-align: center;
+  }
+  img {
+    margin: auto;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- The App Section -->
+<div class="container">
+  <div class="row">
+    <div class="column-66">
+      <h1 class="xlarge-font"><b>About CS50</b></h1>
+      <h1 class="large-font" style="color:MediumSeaGreen;"><b>Why Enroll in CS50?</b></h1>
+      <p><span style="font-size:36px">Two thirds of CS50 students have never taken CS before!</span> CS50x is an intro Computer Science course delivered by Harvard University that
+      extends far beyond the computer. For all students of differing prior CS experience, this course teaches students how to think algorithmically and solve problems efficiently.
+      Its implications and examples are inspired by the arts, humanities, social sciences, and sciences. You do not have to be a programer, a CS major, nor a harvard student to join!
+      </p>
+
+      <a href="https://www.edx.org/course/cs50s-introduction-to-computer-science?hs-referral=course-listing" class="button">Enroll In CS50 Today!</a>
+    </div>
+    <div class="column-33">
+        <img src="../static/images/cs50lect.png" width="1200" height="1500">
+    </div>
+  </div>
+</div>
+
+<!-- Clarity Section -->
+<div class="container" style="background-color:#f1f1f1">
+  <div class="row">
+    <div class="column-33">
+      <img src="../static/images/malanbus.jpeg" alt="App" width="335" height="471">
+    </div>
+    <div class="column-66">
+      <h1 class="xlarge-font"><b>About the Instructor</b></h1>
+      <h1 class="large-font" style="color:red;"><b>David Malan, who?</b></h1>
+      <p><span style="font-size:24px">"Perhaps most underappreciated in higher education is the opportunity to transform coursesthemselves  into  communities" -Malan </span> David J. Malan is Gordon McKay Professor of the Practice of Computer Science in the School of Engineering and Applied Sciences and a Member of the Faculty of Education in the Graduate School of Education at Harvard University.
+      He teaches Computer Science 50, otherwise known as CS50, which is Harvard University’s largest course, one of Yale University’s largest courses, and edX’s largest MOOC, with over 2M registrants. He also teaches at Harvard Business School, Harvard Law School, Harvard Extension School, and Harvard Summer School.</p>
+      <a href="https://cs.harvard.edu/malan/social/" class="button" style="background-color:red">Read More</a>
+    </div>
+  </div>
+</div>
+<!-- The App Section -->
+<div class="container">
+  <div class="row">
+    <div class="column-66">
+      <h1 class="xlarge-font"><b>Is CS50 Right for me?</b></h1>
+      <h1 class="large-font" style="color:MediumSeaGreen;"><b>Still Deciding?</b></h1>
+      <p><span style="font-size:36px">Don't hear it from us, hear it from the students</span></p>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span>
+      <a href="https://www.freecodecamp.org/news/harvard-cs50-guide/" class="button">More about the course</a>
+    </div>
+        <iframe class="column-33" width = "800" height = "700"
+            src="https://www.youtube.com/embed/0S7isdzIBU4">
+        </iframe>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+
+{% endblock %}

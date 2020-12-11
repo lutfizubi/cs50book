@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% block body %}
+
+  <meta charset="UTF-8">
+  <title>Sign Up Form</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+  <link rel="stylesheet" href="../static/css/css/style.css">
+
+<style>
+body {
+  background-image: url('../static/images/backg.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+</style>
+  
+</head>
+
+<body>
+  <br>
+<div class="container">
+  <form action = "/register", method= "POST">
+    <div class="row">
+    	<center><h4>Sign Up</h4></center>
+      
+        <div class="input-group input-group-icon">
+        <input name="firstname" type="text" placeholder="First Name" required>
+        <div class="input-icon"><i class="fa fa-user"></i></div>
+        </div>
+
+        <div class="input-group input-group-icon">
+        <input name="lastname" type="text" placeholder="Last Name" required>
+        <div class="input-icon"><i class="fa fa-user"></i></div>
+        </div>
+
+        <div class="input-group input-group-icon">
+        <input name="email" type="email" placeholder="Email Adress"required>
+        <div class="input-icon"><i class="fa fa-envelope"></i></div>
+    	</div>
+
+        <div class="input-group input-group-icon">
+        <input type="text" name="username" placeholder="Enter your Username" required>
+        <div class = "input-icon"><i class="fa fa-user"></i></div>
+    	</div>
+
+    	<div class = "input-group input-group-icon">
+        <input type="text" placeholder="Hometown" name="hometown" required>
+        <div class ="input-icon"><i class="fa fa-home"></i></div>
+        </div>
+
+      
+        <div class="input-group input-group-icon">
+        <input type="password" placeholder="Password" name="password" required>
+        <div class="input-icon"><i class="fa fa-key"></i></div>
+        </div>
+
+        <div class = "input-group input-group-icon">
+        <input type="url" placeholder="Personal Website Link" name="personalwebsite" required>
+        <div class ="input-icon"><i class="fa fa-external-link"></i></div>
+        </div>
+        
+		<input id="button" type="submit" value="register">
+
+		<center>
+    <p> Already have an account? <a href='/login'> click here to login</a>
+</center>
+
+
+    </div>
+    <script src="js/index.js"></script>
+<center>
+    {% if taken == 1 %}
+<h3> The Username is taken</h3>
+	{% endif %}
+</center>
+{% endblock %}

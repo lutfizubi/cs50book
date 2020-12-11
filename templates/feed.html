@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block body %}
+<center>
+<meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+  <link rel="stylesheet" href="../static/css/css/style.css">
+
+
+<body>
+<br>
+<br>
+<div class="container">
+  <form action = "/feed", method= "POST">
+	<center><h4>Newsfeed</h4></center>
+    <div class="row">     
+        <div class="input-group input-group-icon">
+        <input name="post" type="text" placeholder="Express Yourself!" required>
+        <br>
+        <br>
+        <center>
+        <input style="padding-left:15px;" id="button" type="submit" value="post">
+  		</center>
+        <div class="input-icon"><i class="fa fa-pencil-square-o"></i></div>
+        </div>
+
+
+
+
+</div>
+{% for post in allposts %}
+<div class="container">
+  <img src="../static/images/index.png" alt="Avatar" style="width:90px">
+  <p><span>{{post.username}}</span> </p>
+  <p>{{post.post}}</p>
+  <p>{{post.time_string}}</span></p>
+</div>
+{% endfor %}
+<style type="text/css">
+.container {
+  border: 2px solid #ccc;
+  background-color: #eee;
+  border-radius: 5px;
+  padding: 16px;
+  margin: 16px 0
+}
+
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.container img {
+  float: left;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.container span {
+  font-size: 20px;
+  margin-right: 15px;
+}
+
+@media (max-width: 500px) {
+  .container {
+      text-align: center;
+  }
+  .container img {
+      margin: auto;
+      float: none;
+      display: block;
+  }
+
+  .feeds{
+  	width: 100%;
+  	background-color: lightblue;
+  	text-align: center;
+
+  }
+</style>
+</center>
+{% endblock %}

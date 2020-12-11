@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+
+
+        <center><h4 style= "color:#7ed321;">List Page</h4></center>
+
+
+
+
+
+
+<style>
+.card {
+    background-color: grey;
+    box-shadow: 10px 10px 5px #888888;
+    box-shadow: 0 4px 8px 0 rgba(15px, 22px, 41px, #888888);
+    transition : 0.3s;
+    width: 300px;
+    text-align: center;
+    float: left;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+
+
+</style>
+
+<div style="margin-left: 100px;">
+ {% for users in allusers %}
+
+
+<div class="card">
+    <br>
+<center><img src="../static/images/index.png" alt="Avatar" style="border-radius: 130px; width: 70%;"></center>
+  <div>
+    
+    <h4 style="text-align: center;"><b> {{users.username}} </b></h4>
+    <h4 style="text-align: center;"><b> {{users.firstname}} {{users.lastname}} </b></h4>
+    <h4 style="text-align: center;"><b> {{users.email}} </b></h4>
+   <center><a href= "{{users.personalwebsite}}">Personal Website</a></center> 
+   
+  </div>
+</div>
+
+{% endfor %}
+
+
+{% endblock %}

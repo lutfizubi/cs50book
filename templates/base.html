@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
+
+  <title>CsFiftyBook</title> 
+  <ul>
+    <li><a href="home">Home</a></li>
+    <li><a href = "feed"> News Feed</a></li>
+    <li><a href = "list"> List of Users</a></li>
+    <li><a href = "about"> About the Course </a></li>
+    {% if "username" in session %}
+    <li style="float: right;"><a href='logout'>Logout</a></li>
+    {% else %}
+    <li style="float: right;"><a href = "login"> Login</a></li>
+    <li style="float: right;"><a href = "register">Register</a></li>
+    {% endif %}
+    <center>
+      <img src="../static/images/logo.png" height="70px" width="200px" style="margin-right:210px;">
+    </center>
+<!-- TODO: add more links on the navigation bar here -->
+  </ul>
+</head>
+
+<body class="background">
+
+{% block body %}
+
+
+{% endblock %}
+
+
+
+</body>
+</html>
+

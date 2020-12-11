@@ -1,0 +1,64 @@
+/*BASE CSS*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+body {
+margin-left: 0px;
+margin-right: 0px;
+
+}
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+ .img{
+  margin-left: 30px;
+  float:left;
+  padding: 20px;
+ }
+
+
+.background{
+  background-color: white;
+
+}
+
+#wecodediv{
+  background-color: #a7f977;
+  height: 280px;
+  width: 90%;
+  box-shadow: 1px 10px 100px #888888;
+}
+
+
+.container{
+  margin-top: 100px;
+  box-shadow: 1px 10px 100px #888888;
+
+}
+
+
+
+
+.r{
+  background-color: #a7f977;
+  height: 220px;
+  width: 90%;
+  box-shadow: 1px 10px 100px #888888;
+  float: right;
+}

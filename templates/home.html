@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<!-- <h1>Home Page</h1> -->
+
+<!-- TODO: implement home page. -->
+<head>
+        <link href="../static/css/lutfi.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>This is CsFiftyBook</title>
+        <meta charset="utf-8">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+        <div id="demo" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
+          </ul>
+          <!-- The slideshow -->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <iframe width="1500" height="800"
+                  src="https://www.youtube.com/embed/3oFAJtFE8YU">
+              </iframe>
+            </div>
+            <div class="carousel-item">
+              <img src="../static/images/cs50fair2016.jpg" alt="Cs50 Final Project Fair 2016">
+            </div>
+            <div class="carousel-item">
+              <img src="../static/images/duck.jpg" alt="Professor Duck teaching Lecture">
+            </div>
+            <div class="carousel-item">
+              <iframe width="1500" height="800"
+                  src="https://www.youtube.com/embed/UH3k4m_STdg">
+              </iframe>
+            </div>
+            <div class="carousel-item">
+              <img src="../static/images/yaleharvard.jpg" alt="CS50 Unites yale-harvard Students">
+            </div>
+            <div class="carousel-item">
+              <img src="../static/images/virtualcs50.jpg" alt="virtual welcome">
+            </div>
+
+              <!-- Left and right controls -->
+          <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </a>
+          <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </a>
+        </div>
+
+       <script>
+        window.onscroll = function() {myFunction()};
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+               navbar.classList.add("sticky");
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+        </script>
+
+        <!-- source: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_navbar_sticky -->
+ <br>
+
+ <br>
+ </div>
+</center>
+ <br>
+ <br>
+<center>
+
+<div class="container">
+  <img src="../static/images/mission.jpg" alt="CsFiftyBook's mission" style="width:100%;">
+  <div class="text-block">
+    <h4>CsFiftyBook's Mission</h4>
+    <p>Amidst these trying times, our virtual world has seemingly become our reality. CsFiftyBook is a project that aims to connect Cs50 Alumn and current
+    students over the world; a cyberspace for coders sharing their accomplishments, ideas, and giving detailed CS50 course reviews and reccomendations.</p>
+  </div>
+</div>
+
+
+<center><div style="background-color: #333333; color: white; height: 50px;">Created by Lutfi ALzubi <a href="mailto:lutfizubi2@gmail.com"> <br> <div style="background-color: #ffffff; width: 120px"> Contact Me </a></div> </div></center>
+<br>
+</center>
+</body>
+{% endblock %}
